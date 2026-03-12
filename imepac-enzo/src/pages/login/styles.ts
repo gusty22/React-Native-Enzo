@@ -6,55 +6,51 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: palette.background,
         justifyContent: "center",
-        paddingHorizontal: 30
+        paddingHorizontal: 25
     },
     wrapper: {
         backgroundColor: palette.card,
         borderRadius: 24,
-        padding: 28
+        padding: 30,
+        elevation: 3, // Sombra menor no Android
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.06, // Sombra muito mais suave no iOS/Web
+        shadowRadius: 12,
     },
     title: {
-        fontSize: 28,
+        fontSize: 30,
         fontWeight: "800",
         color: palette.textPrimary,
+        marginBottom: 5
+    },
+    subtitle: {
+        fontSize: 14,
+        color: palette.textSecondary,
         marginBottom: 25
-    },
-    // Novo contêiner para abraçar o input e o ícone
-    controlContainer: {
-        backgroundColor: palette.inputBg,
-        height: 52,
-        borderRadius: 16,
-        paddingHorizontal: 16,
-        marginBottom: 16,
-        flexDirection: "row", // Coloca os itens lado a lado
-        alignItems: "center", // Centraliza verticalmente
-        justifyContent: "space-between", // Joga o ícone para o canto direito
-    },
-    control: {
-        flex: 1, // Faz o texto ocupar todo o espaço disponível antes do ícone
-        height: "100%",
-        color: palette.textPrimary,
-        marginRight: 10, // Espaçamento entre o texto e o ícone
     },
     action: {
         backgroundColor: palette.accent,
-        height: 52,
+        height: 55,
         borderRadius: 16,
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 10
+        marginTop: 15,
+        elevation: 1
     },
     actionText: {
-        color: palette.background,
-        fontWeight: "700",
-        fontSize: 16
+        color: palette.card, // Texto branco
+        fontWeight: "bold",
+        fontSize: 16,
+        letterSpacing: 0.5
     },
     secondaryAction: {
-        marginTop: 18,
+        marginTop: 20,
         alignItems: "center"
     },
     secondaryText: {
-        color: palette.accentSoft,
-        fontSize: 14
+        color: palette.accent,
+        fontSize: 14,
+        fontWeight: '600'
     }
 });
